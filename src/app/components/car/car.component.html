@@ -1,0 +1,17 @@
+<h1>car</h1>
+
+<p>{{ car.carName }}</p>
+<p>fuel: {{ car.currentFuel }} /{{ car.fuel }} | millage: {{car.carMileage}}</p>
+
+<button (click)="drive($event)">drive</button>
+<button *ngIf="isVisible" (click)="refuel($event)">refuel</button>
+
+<p></p>
+
+
+<p>Description</p>
+<ul>
+    <li *ngFor="let car of car.carDescr">
+        {{car}}
+    </li>
+</ul>
